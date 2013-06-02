@@ -27,8 +27,8 @@ function newWords(){
     $(".post2").html($(".post1").html());
     $(".post1").html($(".post0").html());
     $(".post0").html("");
-    $(".post0").css({fontSize:'30px',height:'0px',opacity:'1'});
-    $(".post1").css({fontSize:'30px',opacity:'1'});
+    $(".post0").css({fontSize:'27px',height:'0px',opacity:'1'});
+    $(".post1").css({fontSize:'27px',opacity:'1'});
     $(".post2").css({fontSize:'25px',opacity:'0.8'});
     $(".post3").css({fontSize:'20px',opacity:'0.6'});
     $(".post4").css({fontSize:'18px',opacity:'0.4'});
