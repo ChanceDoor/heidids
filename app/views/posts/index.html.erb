@@ -3,20 +3,20 @@
   <%= image_tag('heidilogox2.png',:id => 'cathead2',:style=>'display:none') %>
   <div style = "margin:0 auto; width:500px">
     <% x = 0%>
-    <div class = "post0"><span id = "current_words"></span></div><br>
+    <div class = "post0"></div><br>
     <% if @posts %>
       <% @posts.each do |post| %>
         <% x += 1 %>
         <div class = "post<%= x %>"><span title="By:<%=post.poster%> At:<%=post.updated_at.to_s(:db)%>"><%= post.content %></span></div>
-        <br>
+        
       <% end %>
     </div> 
     <%= paginate @posts %>
   <% end %>
   <br >
   <%= form_tag posts_path(:format => "json"), :id => "newword", :method => :post,:remote=>true,:onsubmit=>"newWords();"%>
-  <%=text_field_tag :content,params[:content],:required=>true,:style=>"width:200px"%><br>
+  <%=text_field_tag :content,params[:content],:required=>true,:style=>"width:194px"%><br>
   <%=text_field_tag :poster,params[:poster],:maxlength=>20,:size=>12,:style=>"width:150px"%>
-  <%=submit_tag "Say",:id=>"say",:onclick=>"switchElement('cathead2','cathead1');"%>
+  <%=submit_tag "Say",:id=>"say",:style =>"height:30px,vertical-align:top",:onclick=>"switchElement('cathead2','cathead1');"%>
 
 </div>
